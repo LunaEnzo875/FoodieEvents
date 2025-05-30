@@ -10,13 +10,7 @@ namespace FoodieEvents
                 throw new ArgumentException("evento no encontrado");
             }
         }
-        public static void ValidarParticipantes(int restriccionAlimentaria)
-        {
-            if (restriccionAlimentaria > 4)
-            {
-                throw new ArgumentException("No valido");
-            }
-        }
+
         public static void ValidarReserva(int estadoReserva)
         {
             if (estadoReserva > 3)
@@ -34,14 +28,15 @@ namespace FoodieEvents
             }
         }
 
-        public static void ValidarOpcion(int opcion, int minimo, int maximo)
+        public static void ValidarMaxima(int CapacidadMaxima)
         {
-            if (opcion < minimo || opcion > maximo)
+            if (CapacidadMaxima < 0 || CapacidadMaxima > 101)
             {
-                throw new ArgumentException($"La opción debe estar entre {minimo} y {maximo}");
+                throw new ArgumentException("La capacidad es imposible cuando debe ser mayor a 0 y menor a 101");
             }
+}
 
-        }
+
         public static void ValidarNumero(int Telefono)
         {
             if (Telefono < 100000000 || Telefono > 999999999)
@@ -73,4 +68,3 @@ namespace FoodieEvents
         }
     }
 }
-
