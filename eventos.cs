@@ -3,13 +3,13 @@ namespace FoodieEvents;
 public class Eventos
 {
     private string nombre="";
-    public string descripcion="";
-    public int tipoEvento;
-    public DateTime inicio;
-    public DateTime fin;
-    public int capacidadMaxima = 100;
-    public int precioEntrada = 35;
-    public string ubicacion="";
+    private string descripcion="";
+    private int tipoEvento;
+    private DateTime inicio;
+    private DateTime fin;
+    private int capacidadMaxima = 100;
+    private int precioEntrada = 35;
+    private string ubicacion="";
 
     public Eventos(string? nombre, string? descripcion, int tipoEvento, DateTime inicio, DateTime fin, string? ubicacion)
     {
@@ -42,4 +42,25 @@ this.ubicacion = ubicacion;
     {
         return this.nombre;
     }
+    public string getdescripcion(){
+        return this.descripcion;
+    }
+    public int gettipoEvento(){
+        return this.tipoEvento;
+    }
+    public DateTime getinicio(){
+    return this.inicio;
+    }
+    public DateTime getFin(){
+        return this.fin;
+    }
+    public int getcapacidadMaxima(){
+        return this.capacidadMaxima;
+    }
+public int getprecioEntrada(){
+    return this.precioEntrada;
+}
+public string getubicacion(){
+    return this.ubicacion;
+}
 }
