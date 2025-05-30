@@ -6,14 +6,12 @@ public class Participantes
     private string correo="";
     private int telefono;
     private int DNI;
-    private int restriccionAlimentaria;
-    public Participantes(string nombreCompleto,string correo,int telefono,int DNI,int restriccionAlimentaria){
+    private string restriccionAlimentaria;
+    public Participantes(string nombreCompleto,string correo,int telefono,int DNI,string restriccionAlimentaria){
 this.nombreCompleto=nombreCompleto;
 this.correo=correo; 
 this.telefono=telefono;
 this.DNI=DNI;
-
-Validaciones.ValidarParticipantes(restriccionAlimentaria);
 this.restriccionAlimentaria=restriccionAlimentaria;
 }
     public string getnombreCompleto()
@@ -30,7 +28,7 @@ this.restriccionAlimentaria=restriccionAlimentaria;
         public int getDNI(){
         return this.DNI;
     }
-    public int getrestriccionAlimentaria(){
+    public string getrestriccionAlimentaria(){
         return this.restriccionAlimentaria;
     }
 }
