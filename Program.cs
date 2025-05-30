@@ -1,6 +1,5 @@
-using FoodieEvents;
 
-       
+using FoodieEvents;
 
 //eventos
 Console.WriteLine("Ingrese el nombre del evento");
@@ -40,10 +39,6 @@ Console.WriteLine("La ubicacion es: "+eventos.getubicacion());
 
 
 //Chef Organizadores
-List<ChefOrganizadores> chefOrganizadoresList = new List<ChefOrganizadores>
-{
-
-};
 
 Console.WriteLine("Ingrese nombre completo  del chef/Organizador");
 string NombreCompleto=Console.ReadLine();
@@ -74,10 +69,6 @@ Console.WriteLine("El correo electronico es:"+chefOrganizadores.GetCorreo());
 Console.WriteLine("Su numero de telefono es:" + chefOrganizadores.GetTelefono());
 
 //Participantes
-List<Participantes> participantesList = new List<Participantes>
-{
-
-};
 
 Console.WriteLine("Ingrese su nombre completo de participante");
 string  nombreCompleto=Console.ReadLine();
@@ -105,10 +96,7 @@ Console.WriteLine("Tiene restriccion Alimentaria?:"+ participantes.getrestriccio
 
 
 //Reservas
-List<Reserva> reservasList = new List<Reserva>
-{
 
-};
 Console.WriteLine("Ingrese su inscripcion");
 string inscripcion=Console.ReadLine();
 
