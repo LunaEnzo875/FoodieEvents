@@ -1,4 +1,4 @@
-﻿using FoodieEvents;
+using FoodieEvents;
 
 //eventos
 Console.WriteLine("Ingrese el nombre del evento");
@@ -42,9 +42,11 @@ string  nombreCompleto=Console.ReadLine();
 
 Console.WriteLine("Ingrese su correo del participante");
 string correo=Console.ReadLine();
+Validaciones.Validarcorreo(correo);
 
 Console.WriteLine("Ingrese su numero de telefono de participante");
 int telefono=int.Parse(Console.ReadLine());
+Validaciones.ValidarTelefono(telefono);
 
 Console.WriteLine("Ingrese su DNI");
 int DNI=int.Parse(Console.ReadLine());
@@ -74,9 +76,11 @@ int cantidadExperiencia=int.Parse(Console.ReadLine());
 
 Console.WriteLine("Ingresa correo del chef/Organizador");
 string Correo =Console.ReadLine();
+Validaciones.ValidarCorreo(Correo);
 
 Console.WriteLine("Ingrese su numero de telefono(Chef/Organizador)");
 int Telefono=int.Parse(Console.ReadLine());
+Validaciones.ValidarNumero(Telefono);
 
 ChefOrganizadores chefOrganizadores=new ChefOrganizadores(NombreCompleto,especialidad,nacionalidad,cantidadExperiencia,Correo,Telefono);
 Console.WriteLine("El nombre Completo:"+chefOrganizadores.NombreCompleto);
