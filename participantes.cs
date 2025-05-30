@@ -7,6 +7,8 @@ public class Participantes
     private int telefono;
     private int DNI;
     private string restriccionAlimentaria;
+    public List<Reserva> reservasList = new List<Reserva>();
+    
     public Participantes(string nombreCompleto,string correo,int telefono,int DNI,string restriccionAlimentaria){
 this.nombreCompleto=nombreCompleto;
 this.correo=correo; 
