@@ -2,11 +2,11 @@ namespace FoodieEvents;
 
 public class Participantes
 {
-    public string nombreCompleto="";
-    public string correo="";
-    public int telefono;
-    public int DNI;
-    public int restriccionAlimentaria;
+    private string nombreCompleto="";
+    private string correo="";
+    private int telefono;
+    private int DNI;
+    private int restriccionAlimentaria;
     public Participantes(string nombreCompleto,string correo,int telefono,int DNI,int restriccionAlimentaria){
 this.nombreCompleto=nombreCompleto;
 this.correo=correo; 
@@ -16,4 +16,21 @@ this.DNI=DNI;
 Validaciones.ValidarParticipantes(restriccionAlimentaria);
 this.restriccionAlimentaria=restriccionAlimentaria;
 }
+    public string getnombreCompleto()
+    {
+        return this.nombreCompleto;
+    }
+    public string getcorreo()
+    {
+        return this.correo;
+    }
+    public int gettelefono(){
+        return this.telefono;
+    }
+        public int getDNI(){
+        return this.DNI;
+    }
+    public int getrestriccionAlimentaria(){
+        return this.restriccionAlimentaria;
+    }
 }
