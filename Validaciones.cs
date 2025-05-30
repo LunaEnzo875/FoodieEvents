@@ -42,6 +42,35 @@ namespace FoodieEvents
             }
 
         }
+        public static void ValidarNumero(int Telefono)
+        {
+            if (Telefono < 100000000 || Telefono > 999999999)
+            {
+                throw new ArgumentException("El número de teléfono debe tener 9 dígitos");
+            }
+        }
+                public static void ValidarTelefono(int telefono)
+        {
+            if (telefono < 100000000 || telefono > 999999999)
+            {
+                throw new ArgumentException("El número de teléfono debe tener 9 dígitos");
+            }
+        }
+        public static void ValidarCorreo(string Correo)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            bool isValid = System.Text.RegularExpressions.Regex.IsMatch(Correo, pattern);
 
+            Console.WriteLine($"Is the email '{Correo}' valid? {isValid}");
+        }
+
+        public static void Validarcorreo(string correo)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            bool isValid = System.Text.RegularExpressions.Regex.IsMatch(correo, pattern);
+            
+        Console.WriteLine($"este email '{correo}'  no es valido");
+        }
     }
 }
+
