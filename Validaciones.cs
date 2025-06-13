@@ -3,22 +3,6 @@ namespace FoodieEvents
 {
     public static class Validaciones
     {
-        public static void ValidarEvento(int tipoEvento)
-        {
-            if (tipoEvento > 4)
-            {
-                throw new ArgumentException("evento no encontrado");
-            }
-        }
-
-        public static void ValidarReserva(int estadoReserva)
-        {
-            if (estadoReserva > 3)
-            {
-                throw new ArgumentException("Esta mal en algo");
-            }
-        }
-
 
         public static void ValidadorFecha(DateTime inicio, DateTime fin)
         {
@@ -35,7 +19,6 @@ namespace FoodieEvents
                 throw new ArgumentException("La capacidad es imposible cuando debe ser mayor a 0 y menor a 101");
             }
 }
-
 
         public static void ValidarNumero(int Telefono)
         {
@@ -56,7 +39,7 @@ namespace FoodieEvents
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             bool isValid = System.Text.RegularExpressions.Regex.IsMatch(Correo, pattern);
 
-            Console.WriteLine($"Is the email '{Correo}' valid? {isValid}");
+            Console.WriteLine($"Is the email '{Correo}' no es valido");
         }
 
         public static void Validarcorreo(string correo)
