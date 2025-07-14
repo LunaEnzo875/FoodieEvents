@@ -42,12 +42,6 @@ namespace FoodieEvents
             Console.WriteLine($"Is the email '{Correo}' no es valido");
         }
 
-        public static void Validarcorreo(string correo)
-        {
-            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            bool isValid = System.Text.RegularExpressions.Regex.IsMatch(correo, pattern);
-            
-        Console.WriteLine($"este email '{correo}'  no es valido");
-        }
+
     }
 }
