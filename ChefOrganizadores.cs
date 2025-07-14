@@ -1,19 +1,15 @@
 namespace FoodieEvents;
 
 public class ChefOrganizadores{
-
-    private string NombreCompleto="";
     private string especialidad;
     private string nacionalidad;
     private int cantidadExperiencia;
-    private string Correo="";
-    private int Telefono;
-public ChefOrganizadores(string nombreCompleto,string especialidad,string nacionalidad,int cantidadExperiencia,string Correo,int Telefono){
-this.NombreCompleto=nombreCompleto;
-this.especialidad=especialidad;
-this.nacionalidad=nacionalidad;
-this.Correo=Correo;
-this.Telefono=Telefono;
+    public ChefOrganizadores(string especialidad, string nacionalidad, int cantidadExperiencia)
+        : base(NombreCompleto, Correo, Telefono)
+    {
+        this.especialidad = especialidad;
+        this.nacionalidad = nacionalidad;
+        this.cantidadExperiencia = cantidadExperiencia;
 }
     public string getNombreCompleto()
     {
