@@ -11,7 +11,6 @@ string descripcion =Console.ReadLine();
 Console.WriteLine("Ingrese el tipo de evento");
 string tipoEvento = Console.ReadLine();
 
-
 Console.WriteLine("Ingrese la fecha de inicio el evento(yyyy-MM-dd):");
 DateTime inicio = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", null);
 Console.WriteLine(inicio);
@@ -44,10 +43,10 @@ Console.WriteLine("Ingrese nombre completo  del chef/Organizador");
 string NombreCompleto=Console.ReadLine();
 
 Console.WriteLine("Ingrese su especialidad");
-string especialidad=(Console.ReadLine());
+string especialidad=Console.ReadLine();
 
 Console.WriteLine("Ingresa tu nacionalidad");
-string nacionalidad=(Console.ReadLine());
+string nacionalidad=Console.ReadLine();
 
 Console.WriteLine("Cuantos años de experiencia tienes?");
 int cantidadExperiencia=int.Parse(Console.ReadLine());
@@ -58,7 +57,6 @@ Validaciones.ValidarCorreo(Correo);
 
 Console.WriteLine("Ingrese su numero de telefono(Chef/Organizador)");
 int Telefono=int.Parse(Console.ReadLine());
-Validaciones.ValidarNumero(Telefono);
 
 ChefOrganizadores chefOrganizadores=new ChefOrganizadores(NombreCompleto,especialidad,nacionalidad,cantidadExperiencia,Correo,Telefono);
 Console.WriteLine("El nombre Completo:"+chefOrganizadores.getNombreCompleto());

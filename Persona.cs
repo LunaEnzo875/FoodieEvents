@@ -11,6 +11,7 @@ namespace FoodieEvents {
             Correo = correo;
             Validaciones.ValidarCorreo(Correo);
             Telefono = telefono;
+            Validaciones.ValidarTelefono(Telefono);
         }
     }
 }
