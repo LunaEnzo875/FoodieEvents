@@ -18,7 +18,7 @@ namespace FoodieEvents
             {
                 throw new ArgumentException("La capacidad es imposible cuando debe ser mayor a 0 y menor a 101");
             }
-}
+        }
 
         public static void ValidarNumero(int Telefono)
         {
@@ -27,9 +27,9 @@ namespace FoodieEvents
                 throw new ArgumentException("El número de teléfono debe tener 9 dígitos");
             }
         }
-                public static void ValidarTelefono(int telefono)
+        public static void ValidarTelefono(int Telefono)
         {
-            if (telefono < 100000000 || telefono > 999999999)
+            if (Telefono < 100000000 || Telefono > 999999999)
             {
                 throw new ArgumentException("El número de teléfono debe tener 9 dígitos");
             }
@@ -43,5 +43,12 @@ namespace FoodieEvents
         }
 
 
+        public static void ValidarEstrellas(int Estrellas)
+        {
+            if (Estrellas < 6 || Estrellas > -1)
+            {
+                throw new ArgumentException("El maximo de calificacion de estrellas es de 5");
+            }
+        }
     }
 }

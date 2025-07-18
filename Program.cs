@@ -11,7 +11,7 @@ string descripcion =Console.ReadLine();
 Console.WriteLine("Ingrese el tipo de evento");
 string tipoEvento = Console.ReadLine();
 
-Console.WriteLine("Ingrese la fecha de inicio el evento(yyyy-MM-dd):");
+Console.WriteLine("Ingrese la fecha de inicio el evento(yyyy-MM-dd):"); 
 DateTime inicio = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", null);
 Console.WriteLine(inicio);
 
@@ -27,20 +27,20 @@ Console.WriteLine("Ingrese la ubicacion donde estara el evento");
 string ubicacion =Console.ReadLine();
 
 Eventos eventos = new Eventos(nombre,descripcion,tipoEvento,inicio,fin,ubicacion);
-Console.WriteLine("Nombre:" + eventos.getNombre());
-Console.WriteLine("Descripcion:"+ eventos.getdescripcion());
-Console.WriteLine("El tipo del evento es:"+eventos.gettipoEvento());
-Console.WriteLine("inicio del evento:"+eventos.getinicio());
-Console.WriteLine("Fin del evento:"+eventos.getFin());
-Console.WriteLine("Capacidad Maxima de entradas"+eventos.getcapacidadMaxima());
-Console.WriteLine("Precio de la entrada"+eventos.getprecioEntrada());
-Console.WriteLine("La ubicacion es: "+eventos.getubicacion());
+Console.WriteLine("Nombre:" + eventos);
+Console.WriteLine("Descripcion:"+ eventos);
+Console.WriteLine("El tipo del evento es:"+eventos);
+Console.WriteLine("inicio del evento:"+eventos);
+Console.WriteLine("Fin del evento:"+eventos);
+Console.WriteLine("Capacidad Maxima de entradas"+eventos);
+Console.WriteLine("Precio de la entrada"+eventos);
+Console.WriteLine("La ubicacion es: "+eventos);
 
 
 //Chef Organizadores
 
 Console.WriteLine("Ingrese nombre completo  del chef/Organizador");
-string NombreCompleto=Console.ReadLine();
+string? NombreCompleto=Console.ReadLine();
 
 Console.WriteLine("Ingrese su especialidad");
 string especialidad=Console.ReadLine();
@@ -56,27 +56,27 @@ string Correo =Console.ReadLine();
 Validaciones.ValidarCorreo(Correo);
 
 Console.WriteLine("Ingrese su numero de telefono(Chef/Organizador)");
-int Telefono=int.Parse(Console.ReadLine());
+int telefono=int.Parse(Console.ReadLine());
 
-ChefOrganizadores chefOrganizadores=new ChefOrganizadores(NombreCompleto,especialidad,nacionalidad,cantidadExperiencia,Correo,Telefono);
-Console.WriteLine("El nombre Completo:"+chefOrganizadores.getNombreCompleto());
-Console.WriteLine("Su especialidad:"+chefOrganizadores.getespecialidad());
-Console.WriteLine("Su nacionalidad es:"+chefOrganizadores.getNacionalidad());
-Console.WriteLine("Años de experiencia:"+chefOrganizadores.getcantidadExperiencia());
-Console.WriteLine("El correo electronico es:"+chefOrganizadores.GetCorreo());
-Console.WriteLine("Su numero de telefono es:" + chefOrganizadores.GetTelefono());
+ChefOrganizadores chefOrganizadores=new ChefOrganizadores( NombreCompleto,  Correo, telefono,  especialidad,  nacionalidad,  cantidadExperiencia);
+Console.WriteLine("El nombre Completo:"+chefOrganizadores.NombreCompleto);
+Console.WriteLine("Su especialidad:"+chefOrganizadores.Correo);
+Console.WriteLine("Su nacionalidad es:"+chefOrganizadores.telefono);
+Console.WriteLine("Años de experiencia:"+chefOrganizadores.especialidad);
+Console.WriteLine("El correo electronico es:"+chefOrganizadores.nacionalidad);
+Console.WriteLine("Su numero de telefono es:" + chefOrganizadores.cantidadExperiencia);
 
 //Participantes
 
 Console.WriteLine("Ingrese su nombre completo de participante");
-string  nombreCompleto=Console.ReadLine();
+  NombreCompleto = Console.ReadLine();
 
 Console.WriteLine("Ingrese su correo del participante");
-string correo=Console.ReadLine();
-Validaciones.Validarcorreo(correo);
+ Correo =Console.ReadLine();
+Validaciones.ValidarCorreo(Correo);
 
 Console.WriteLine("Ingrese su numero de telefono de participante");
-int telefono=int.Parse(Console.ReadLine());
+ telefono=int.Parse(Console.ReadLine());
 Validaciones.ValidarTelefono(telefono);
 
 Console.WriteLine("Ingrese su DNI");
@@ -85,12 +85,12 @@ int DNI=int.Parse(Console.ReadLine());
 Console.WriteLine("¿Tiene una restriccion alimentaria?");
 string restriccionAlimentaria=Console.ReadLine();
 
-Participantes participantes=new Participantes(nombreCompleto,correo,telefono,DNI,restriccionAlimentaria);
-Console.WriteLine("El nombre Completo:"+participantes.getnombreCompleto());
-Console.WriteLine("El correo electronico es:"+participantes.getcorreo());
-Console.WriteLine("Su numero de telefono es:"+participantes.gettelefono());
-Console.WriteLine("Su DNI es:"+ participantes.getDNI());
-Console.WriteLine("Tiene restriccion Alimentaria?:"+ participantes.getrestriccionAlimentaria());
+Participantes participantes=new Participantes(NombreCompleto,Correo,telefono,DNI,restriccionAlimentaria);
+Console.WriteLine("El nombre Completo:"+NombreCompleto);
+Console.WriteLine("El correo electronico es:"+Correo);
+Console.WriteLine("Su numero de telefono es:"+telefono);
+Console.WriteLine("Su DNI es:"+ DNI);
+Console.WriteLine("Tiene restriccion Alimentaria?:"+ restriccionAlimentaria);
 
 
 //Reservas
@@ -108,7 +108,29 @@ Console.WriteLine("Indique el estado de la reserva");
 short estadoReserva=short.Parse(Console.ReadLine());
 
 Reserva reserva=new Reserva(participantes,inscripcion, fecha, metodoPago, estadoReserva);
-Console.WriteLine(" su inscripcion:" + reserva.getinscripcion());
-Console.WriteLine(" la fecha del evento :" + reserva.getfecha());
-Console.WriteLine(" el metodo de pago:" + reserva.getmetodoPago());
-Console.WriteLine("el estado de la reserva:" + reserva.getestadoReserva());
+Console.WriteLine(" su inscripcion:" + participantes);
+Console.WriteLine(" la fecha del evento :" + inscripcion);
+Console.WriteLine(" el metodo de pago:" + fecha);
+Console.WriteLine("el estado de la reserva:" + metodoPago);
+Console.WriteLine("El estado de la reserva:"+estadoReserva);
+
+//ParticipanteEspecial
+Console.WriteLine("Ingrese su nombre completo de participante");
+  NombreCompleto = Console.ReadLine();
+
+Console.WriteLine("Ingrese su correo del participante");
+ Correo =Console.ReadLine();
+Validaciones.ValidarCorreo(Correo);
+
+Console.WriteLine("Ingrese su numero de telefono de participante");
+ telefono=int.Parse(Console.ReadLine());
+Validaciones.ValidarTelefono(telefono);
+
+Console.WriteLine("Ingrese su critica");
+string Critica = Console.ReadLine();
+
+Console.WriteLine("");
+int Estrellas = int.Parse(Console.ReadLine());
+
+ParticipanteEspecial participanteEspecial = new ParticipanteEspecial(NombreCompleto, Correo, telefono, Critica, Estrellas);
+Console.WriteLine("Su nombre es:" + NombreCompleto);

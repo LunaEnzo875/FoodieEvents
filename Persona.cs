@@ -7,11 +7,11 @@ namespace FoodieEvents {
 
         public Persona(string NombreCompleto, string correo, int telefono)
         {
-            NombreCompleto = NombreCompleto;
+            this.NombreCompleto = NombreCompleto;
             Correo = correo;
             Validaciones.ValidarCorreo(Correo);
-            Telefono = telefono;
-            Validaciones.ValidarTelefono(Telefono);
+            this.telefono = telefono;
+            Validaciones.ValidarTelefono(telefono);
         }
     }
 }

@@ -1,16 +1,16 @@
 namespace FoodieEvents
 {
-    public class ParticipanteEspecial
+    public class ParticipanteEspecial:Persona
     {
         public string Critica { get; private set; }
         public int Estrellas { get; private set; }
         public List<Reserva> reservasList = new List<Reserva>();
-        public ParticipanteEspecial(string Critica, int Estrellas, Reservas reservas)
-        : base(NombreCompleto, Correo, Telefono)
+        public ParticipanteEspecial(string NombreCompleto, string Correo, int telefono, string Critica, int Estrellas)
+        : base(NombreCompleto, Correo, telefono)
         {
-            Critica = Critica;
-            Estrellas = Estrellas;
-            reservas = reservas;
+            this.Critica = Critica;
+            this.Estrellas = Estrellas;
+            Validaciones.ValidarEstrellas(Estrellas);
         }
     }
 }

@@ -1,13 +1,13 @@
 namespace FoodieEvents;
 
-public class Participantes
+public class Participantes:Persona
 {
-    private int DNI { get; private set; }
-    private string restriccionAlimentaria { get;private set; }
+    public int DNI { get; private set; }
+    public string restriccionAlimentaria { get;private set; }
     public List<Reserva> reservasList = new List<Reserva>();
     
-    public Participantes(  int DNI,string restriccionAlimentaria)
-    :base(nombreCompleto,correo,telefono){
+    public Participantes(string NombreCompleto, string Correo,int telefono,  int DNI,string restriccionAlimentaria)
+    :base(NombreCompleto,Correo,telefono){
         this.DNI=DNI;
         this.restriccionAlimentaria=restriccionAlimentaria;
 }
